@@ -6,7 +6,7 @@ import BurgerMenu from "@/app/svg/burgerMenu.svg";
 import X from "@/app/svg/x.svg";
 
 export default function Navbar() {
-  const [openMenu, setOpenMenu] = useState(true);
+  const [openMenu, setOpenMenu] = useState<boolean>(true);
 
   function handleOpenMenu() {
     setOpenMenu(!openMenu);
@@ -15,7 +15,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="w-full h-24 text-2xl m-4 flex items-center">
+      <nav className="w-full h-24 font-bold text-2xl m-4 flex items-center">
         {openMenu ? (
           <Image
             className="w-8 sm:hidden"
@@ -34,10 +34,13 @@ export default function Navbar() {
                 onClick={handleOpenMenu}
               />
               <li>
-                <a href="/">FitIn</a>
+                <a href="/">Care Hands</a>
               </li>
               <li>
                 <a href="/start">Start</a>
+              </li>
+              <li>
+                <a href="/career">Career</a>
               </li>
               <li>
                 <a href="/login">Login</a>
@@ -47,10 +50,13 @@ export default function Navbar() {
         )}
         <ul className="hidden sm:w-full sm:flex sm:justify-evenly">
           <li>
-            <a href="/">FitIn</a>
+            <a href="/">Care Hands</a>
           </li>
           <li>
             <a href="/start">Start</a>
+          </li>
+          <li>
+            <a href="/career">Career</a>
           </li>
           <li>
             <a href="/login">Login</a>
