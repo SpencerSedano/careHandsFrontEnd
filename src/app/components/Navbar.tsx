@@ -15,10 +15,16 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="w-full h-24 font-bold text-2xl m-4 flex items-center">
+      <nav
+        className={
+          openMenu
+            ? "bg-uclablue text-white w-full h-32 font-bold text-1xl sm:flex items-center"
+            : "bg-uclablue text-white w-full h-32 font-bold text-1xl sm:flex items-center"
+        }
+      >
         {openMenu ? (
           <Image
-            className="w-8 sm:hidden"
+            className="flex grow h-10 pointer sm:hidden"
             src={BurgerMenu}
             alt="Burger Menu"
             priority
@@ -26,21 +32,21 @@ export default function Navbar() {
           />
         ) : (
           <>
-            <ul className="sm:hidden">
-              <Image
-                className="w-8 sm:hidden"
-                src={X}
-                alt="X Menu"
-                onClick={handleOpenMenu}
-              />
-              <li>
-                <a href="/">Care Hands</a>
-              </li>
+            <Image
+              className="flex justify-self-center pointer w-6 sm:hidden"
+              src={X}
+              alt="X Menu"
+              onClick={handleOpenMenu}
+            />
+            <ul className="w-full flex flex-col items-center pointer sm:hidden">
               <li>
                 <a href="/start">Start</a>
               </li>
               <li>
-                <a href="/career">Career</a>
+                <a href="/career">Careers</a>
+              </li>
+              <li>
+                <a href="/signup">Sign Up</a>
               </li>
               <li>
                 <a href="/login">Login</a>
@@ -56,7 +62,10 @@ export default function Navbar() {
             <a href="/start">Start</a>
           </li>
           <li>
-            <a href="/career">Career</a>
+            <a href="/career">Careers</a>
+          </li>
+          <li>
+            <a href="/signup">Sign Up</a>
           </li>
           <li>
             <a href="/login">Login</a>

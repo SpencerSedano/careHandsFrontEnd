@@ -11,6 +11,10 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        amber: "#FFBF00",
+        cerise: "#E83F6F",
+        uclablue: "#2274A5",
+        seagreen: "#32936F",
       },
     },
   },
