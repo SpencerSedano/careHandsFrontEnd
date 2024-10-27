@@ -15,16 +15,10 @@ export default function Navbar() {
 
   return (
     <>
-      <nav
-        className={
-          openMenu
-            ? "bg-uclablue text-white w-full h-32 font-bold text-1xl sm:flex items-center"
-            : "bg-uclablue text-white w-full h-32 font-bold text-1xl sm:flex items-center"
-        }
-      >
+      <nav className="bg-uclablue text-white w-full h-16 font-bold text-1xl sm:flex items-center">
         {openMenu ? (
           <Image
-            className="flex grow h-10 pointer sm:hidden"
+            className="flex w-9 h-full justify-self-center pointer sm:hidden"
             src={BurgerMenu}
             alt="Burger Menu"
             priority
@@ -33,43 +27,52 @@ export default function Navbar() {
         ) : (
           <>
             <Image
-              className="flex justify-self-center pointer w-6 sm:hidden"
+              className="h-full flex justify-self-center text-center pointer w-6 sm:hidden"
               src={X}
               alt="X Menu"
               onClick={handleOpenMenu}
             />
-            <ul className="w-full flex flex-col items-center pointer sm:hidden">
-              <li>
-                <a href="/start">Start</a>
-              </li>
-              <li>
-                <a href="/career">Careers</a>
-              </li>
-              <li>
-                <a href="/signup">Sign Up</a>
-              </li>
-              <li>
-                <a href="/login">Login</a>
-              </li>
-            </ul>
+            {!openMenu && (
+              <ul className="z-10 relative bg-black w-full flex flex-col items-center pointer sm:hidden">
+                <li>
+                  <a href="/start">Start</a>
+                </li>
+                <li>
+                  <a href="/career">Careers</a>
+                </li>
+                <li>
+                  <a href="/signup">Sign Up</a>
+                </li>
+                <li>
+                  <a href="/login">Login</a>
+                </li>
+              </ul>
+            )}
           </>
         )}
-        <ul className="hidden sm:w-full sm:flex sm:justify-evenly">
-          <li>
+        <ul className="hidden sm:w-full sm:flex">
+          {/* Logo */}
+          <li className="ml-6 w-full flex justify-start">
             <a href="/">Care Hands</a>
           </li>
-          <li>
-            <a href="/start">Start</a>
-          </li>
-          <li>
-            <a href="/career">Careers</a>
-          </li>
-          <li>
-            <a href="/signup">Sign Up</a>
-          </li>
-          <li>
-            <a href="/login">Login</a>
-          </li>
+          {/* Start and Careers */}
+          <div className="w-full flex justify-center">
+            <li className="mr-6">
+              <a href="/start">Start</a>
+            </li>
+            <li className="">
+              <a href="/career">Careers</a>
+            </li>
+          </div>
+          {/* Sign Up and Login */}
+          <div className="w-full flex justify-end">
+            <li className="mr-6">
+              <a href="/signup">Sign Up</a>
+            </li>
+            <li className="mr-6">
+              <a href="/login">Login</a>
+            </li>
+          </div>
         </ul>
       </nav>
     </>
