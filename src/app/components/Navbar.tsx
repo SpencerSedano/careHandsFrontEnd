@@ -38,6 +38,9 @@ export default function Navbar() {
                   <a href="/start">Start</a>
                 </li>
                 <li>
+                  <a href="/dashboard">Dashboard</a>
+                </li>
+                <li>
                   <a href="/career">Careers</a>
                 </li>
                 <li>
@@ -59,6 +62,9 @@ export default function Navbar() {
           <div className="w-full flex justify-center">
             <li className="mr-6">
               <a href="/start">Start</a>
+            </li>
+            <li className="mr-6">
+              <a href="/dashboard">Dashboard</a>
             </li>
             <li className="">
               <a href="/career">Careers</a>
