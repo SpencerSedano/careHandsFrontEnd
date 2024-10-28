@@ -10,24 +10,55 @@ import Elder from "../components/Elder";
 import SearchBar from "../components/SearchBar";
 import Navbar from "@/app/components/Navbar";
 
+// Next
+import Image from "next/image";
+
 // Images
 import SpencerImage from "@/app/img/spencerimg.jpeg";
+
+// SVG
+import HomeIcon from "@/app/svg/home.svg";
+import ClientIcon from "@/app/svg/client.svg";
+import WorkerIcon from "@/app/svg/worker.svg";
+import TaskIcon from "@/app/svg/task.svg";
+import CalendarIcon from "@/app/svg/calendar.svg";
 
 export default function Dashboard() {
   return (
     <>
       <Navbar />
-      <div className="bg-gray-100 w-11/12 h-dvh p-6 mt-2 rounded-3xl flex justify-center justify-self-center ">
+      <div className="bg-gray-100 w-full sm:w-11/12 h-dvh p-6 mt-2 rounded-3xl flex justify-center justify-self-center ">
         <div className="w-full grid grid-cols-4 grid-rows-6 gap-1 ">
           <LoginWorker>
-            <div className="row-start-1 row-span-1 bg-white w-full h-32 text-center rounded-lg flex justify-center items-center justify-self-center self-end">
+            <div className="row-start-1 row-span-1 bg-white w-full h-32 text-center rounded-lg flex flex-col sm:flex sm:flex-row justify-center items-center justify-self-center self-end">
               <CircleImage image={SpencerImage} />
               <p className="w-1/2 ml-2 text-sm font-bold">Spencer Sedano</p>
             </div>
           </LoginWorker>
           <SideMenu>
             <div className="row-start-2 row-span-6 bg-white w-full h-full rounded-lg flex justify-center items-center justify-self-center">
-              <h1>Side Menu</h1>
+              <ul className="w-full h-full flex flex-col justify-evenly items-center">
+                <li className="flex">
+                  <Image src={HomeIcon} alt="Home Icon" />
+                  <p className="hidden ml-2 sm:block">Home</p>
+                </li>
+                <li className="flex">
+                  <Image src={ClientIcon} alt="Client Icon" />
+                  <p className="hidden ml-2 sm:block">Client</p>
+                </li>
+                <li className="flex">
+                  <Image src={WorkerIcon} alt="Worker Icon" />
+                  <p className="hidden ml-2 sm:block">Workers</p>
+                </li>
+                <li className="flex">
+                  <Image src={TaskIcon} alt="Task Icon" />
+                  <p className="hidden ml-2 sm:block">Tasks</p>
+                </li>
+                <li className="flex">
+                  <Image src={CalendarIcon} alt="Calendar Icon" />
+                  <p className="hidden ml-2 sm:block">Home</p>
+                </li>
+              </ul>
             </div>
           </SideMenu>
           <SearchBar>

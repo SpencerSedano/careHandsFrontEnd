@@ -1,5 +1,7 @@
-import type { ReactNode } from "react";
-
-export default function LoginWorker({ children }: { children: ReactNode }) {
+export default function LoginWorker({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return <>{children}</>;
 }

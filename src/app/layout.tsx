@@ -14,7 +14,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      {/* General Margins: md:ml-24 md:mr-24 md:mt-4 */}
+      <body className="md:mt-4">{children}</body>
     </html>
   );
 }
