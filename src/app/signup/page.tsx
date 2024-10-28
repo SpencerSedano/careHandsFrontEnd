@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import SignUpImage from "@/app/img/signup.jpg";
+import SignUpImage from "../../../public/img/signup.jpg";
 import Navbar from "@/app/components/Navbar";
 import React, { useState } from "react";
 

@@ -1,6 +1,6 @@
 import Image from "next/image";
 /* import Old1 from "@/app/img/old1.jpg"; */
-import LaococoImage from "@/app/svg/laococoimage.svg";
+import LaococoImage from "../../../public/svg/laococoimage.svg";
 
 export default function Hero() {
   return (

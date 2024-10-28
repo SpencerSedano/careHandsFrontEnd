@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import BurgerMenu from "@/app/svg/burgerMenu.svg";
-import X from "@/app/svg/x.svg";
+import BurgerMenu from "../../../public/svg/burgerMenu.svg";
+import X from "../../../public/svg/x.svg";
 
 export default function Navbar() {
   const [openMenu, setOpenMenu] = useState<boolean>(true);

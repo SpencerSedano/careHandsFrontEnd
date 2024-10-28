@@ -14,14 +14,14 @@ import Navbar from "@/app/components/Navbar";
 import Image from "next/image";
 
 // Images
-import SpencerImage from "@/app/img/spencerimg.jpeg";
+import SpencerImage from "../../../public/img/spencerimg.jpeg";
 
 // SVG
-import HomeIcon from "@/app/svg/home.svg";
-import ClientIcon from "@/app/svg/client.svg";
-import WorkerIcon from "@/app/svg/worker.svg";
-import TaskIcon from "@/app/svg/task.svg";
-import CalendarIcon from "@/app/svg/calendar.svg";
+import HomeIcon from "../../../public/svg/home.svg";
+import ClientIcon from "../../../public/svg/client.svg";
+import WorkerIcon from "../../../public/svg/worker.svg";
+import TaskIcon from "../../../public/svg/task.svg";
+import CalendarIcon from "../../../public/svg/calendar.svg";
 
 export default function Dashboard() {
   return (
